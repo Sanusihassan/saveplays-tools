@@ -9,8 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.1",
     "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.1.2",
+    "@astrolib/seo": "^1.0.0-beta.8",
+    "astro": "^5.1.1",
+    "saveplays-footer": "^0.0.3",
+    "saveplays-navbar": "^0.0.3",
     "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
   }
 }

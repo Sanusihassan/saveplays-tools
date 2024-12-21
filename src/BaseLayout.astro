@@ -1,0 +1,78 @@
+---
+import Footer from "saveplays-footer/src/partials/Footer.astro";
+import NavBar from "saveplays-navbar/components/NavBar.tsx";
+import "./index.scss";
+import SeoHead from "./SeoHead.astro";
+import { youtubePageProps } from "./content/content";
+const { lang, title, isYoutube } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <SeoHead {...youtubePageProps}>
+        {isYoutube ?
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "HowTo",
+                "name": "How to Use the YouTube Downloader",
+                "description": "Step-by-step guide on downloading YouTube videos using SavePlays.com",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "/guide-to-download-youtube-video.png",
+                    "width": "600",
+                    "height": "400"
+                },
+                "estimatedCost": {
+                    "@type": "MonetaryAmount",
+                    "currency": "USD",
+                    "value": "0"
+                },
+                "tool": {
+                    "@type": "HowToTool",
+                    "name": "SavePlays.com YouTube Downloader"
+                },
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": "1",
+                        "name": "Navigate to SavePlays",
+                        "text": "Head over to SavePlays.com, the go-to platform for fast YouTube video downloads, and locate the URL input field at the top of the homepage."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": "2",
+                        "name": "Input Video URL",
+                        "text": "Copy the URL of the YouTube video and paste it into the input field on SavePlays.com."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": "3",
+                        "name": "Click Download",
+                        "text": "Press the \"Download\" button to access the list of available download links."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": "4",
+                        "name": "Select Format",
+                        "text": "Choose your preferred video format from the options to start downloading your selected file."
+                    }
+                ]
+            }
+        </script>: null
+    }
+    </SeoHead>
+    <body>
+        <header>
+            <NavBar lang={lang} client:load />
+        </header>
+
+        <h1 class="text-center">{title}</h1>
+
+        <main>
+            <slot />
+        </main>
+
+        <Footer lang={lang} />
+    </body>
+</html>
