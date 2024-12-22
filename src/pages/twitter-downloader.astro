@@ -1,5 +1,11 @@
 ---
+import { SearchInput } from "../components/Input";
 import BaseLayout from "../BaseLayout.astro";
+import { twitterPageProps } from "../content/content";
 ---
 
-<BaseLayout title="Twitter (X) Downloader" lang="en" />
+<BaseLayout title="Twitter (X) Downloader" lang="" pageProps={twitterPageProps}>
+    <div class="container">
+        <SearchInput client:load />
+    </div>
+</BaseLayout>

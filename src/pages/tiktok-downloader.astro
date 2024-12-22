@@ -1,5 +1,11 @@
 ---
+import { SearchInput } from "../components/Input";
 import BaseLayout from "../BaseLayout.astro";
+import { tiktokPageProps } from "../content/content";
 ---
 
-<BaseLayout title="TikTok Downloader" lang="en" />
+<BaseLayout title="TikTok Downloader" lang="" pageProps={tiktokPageProps}>
+    <div class="container">
+        <SearchInput client:load />
+    </div>
+</BaseLayout>

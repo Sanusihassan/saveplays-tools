@@ -1,5 +1,23 @@
 ---
+import FAQ from "../components/Faq";
+import { SearchInput } from "../components/Input";
 import BaseLayout from "../BaseLayout.astro";
+import {
+    facebookDownloaderContent,
+    facebookPageProps,
+} from "../content/content";
+import HowToSection from "../partials/facebook/HowToSection.astro";
 ---
 
-<BaseLayout title="Facebook Downloader" lang="en" />
+<BaseLayout
+    title={facebookDownloaderContent.title}
+    lang=""
+    pageProps={facebookPageProps}
+>
+    <div class="container">
+        <p class="lead text-center">{facebookDownloaderContent.description}</p>
+        <SearchInput client:load />
+        <HowToSection howTo={facebookDownloaderContent.howTo} />
+        <FAQ client:load faqData={facebookDownloaderContent.FAQ} />
+    </div></BaseLayout
+>

@@ -255,3 +255,103 @@ export const twitterPageProps: SeoProps = {
     nofollow: false,
     noindex: false,
 };
+export const facebookDownloaderContent = {
+    title: "Facebook Downloader",
+    description: "Download Facebook videos online",
+    howTo: {
+        title: "How to download videos from Facebook?",
+        description: "Facebook video downloader with the best formats 1080p - 2K - 4K for free",
+        steps: [
+            {
+                step: 1,
+                title: "Copy and paste the video link",
+                description: "Copy the link of a video you want to download from Facebook and paste it in SavePlays.",
+            },
+            {
+                step: 2,
+                title: "Select the output quality",
+                description: "Select the video quality you want to download.",
+            },
+            {
+                step: 3,
+                title: "Download video from Fb",
+                description: "Wait for our server to process and download your device.",
+            },
+        ]
+    },
+    FAQ: [
+        {
+            question: "Why the video is playing instead of downloading?",
+            answer:
+                "That's something normal to happen, especially on browsers other than Chrome. To solve this issue, instead of left clicking the Download Video link, Right Click -> Save as... and choose the location you'd like to save the video to.",
+        },
+        {
+            question: "Can I download Live Facebook videos?",
+            answer:
+                "Yes, you can download Facebook Live videos but only after they finish streaming.",
+        },
+        {
+            question: "Where are videos saved after being downloaded?",
+            answer:
+                "It depends on the OS and Browser you are using, but usually all videos are saved under 'Downloads' folder on Windows and Mac. You can also press CTRL+J in your Browser to view your download history.",
+        },
+        {
+            question: "Video with no audio/only audio",
+            answer:
+                "Videos that contain Copyrighted Music are the most affected. We've found a solution to this, just Click 'Video with No Audio' on the download page of your video and you'll be able to convert the video with audio.",
+        },
+        {
+            question: "Does SavePlays store downloaded videos or keep a copy of videos?",
+            answer:
+                "SavePlays doesn't store videos neither we keep copies of downloaded videos. All videos are hosted on Facebook's servers. Also, we don't keep track of download histories of our users, thus making using SavePlays.com totally Anonymous.",
+        },
+        {
+            question: "Can I download a Facebook video to Full HD 1080p?",
+            answer:
+                "SavePlays's Facebook video downloader is developed with outstanding technology combined with many complex algorithms that allows you to download Facebook videos with high quality: HD 1080p, 2K, 4K. Therefore, SavePlays.com is always preferred by many people.",
+        },
+    ]
+}
+export const instagramDownloaderContent = {
+    title: "Download Instagram video",
+    description: "Download Instagram video, photo, reels, stories, IGTV online",
+    features: {
+        title: "All the features of SavePlays.com Instagram Downloader",
+        description: "SavePlays supports all kinds of video/image links from Instagram.",
+        features: [
+            {
+                feature: "Instagram video downloader",
+                description: "SavePlays lets you download videos from Instagram of your own content. SavePlays supports downloading videos of many types from Insta.",
+                imgUrl: "instagram-video-downloader.webp"
+            },
+            {
+                feature: "Instagram photo downloader",
+                description: "The SavePlays Instagram photo downloader lets you save any photo or collage from Instagram easily. With SavePlays, you can download a single image from a post as well as download multiple Instagram photos.",
+                imgUrl: "instagram-photo-downloader.jpeg"
+            },
+            {
+                feature: "Download Instagram Reels",
+                description: "The SavePlays Reels downloader will help you download Reels videos from Instagram posts to your device when Instagram won't let you.",
+                imgUrl: "download-instagram-reels.webp"
+            },
+            {
+                feature: "IGTV downloader",
+                description: "IGTV is a long video, if you can't watch it right now, you can download the IGTV video to your computer to make sure you can watch it again later, no internet connection or deleting IGTV is needed.",
+                imgUrl: "igtv-downloader.webp"
+            },
+            {
+                feature: "Download Instagram story",
+                description: "Instagram stories are a unique way for anyone to share their daily life with photos and videos. Sometimes you want to save a story you like, but the feature isn't available in the app. Snapinsta was created to solve that problem; to help people download Instagram stories and view them online.",
+                imgUrl: "download-instagram-story.webp"
+            },
+            {
+                feature: "Instagram story viewer",
+                description: "The new SnapInsta feature, the Instagram story viewer from SnapInsta, lets you view someone's story on IG anonymously and safely; besides viewing the story on SnapInsta, you can also see other parameters (likes, views, follows) as if you were on Instagram, and you can download IG story videos to your device. What are you waiting for? Let's try out this IG story viewer feature.",
+                imgUrl: "instagram-story-viewer.webp"
+            }
+        ]
+    }
+}
+
+export type facebookDownloaderContentType = typeof facebookDownloaderContent;
+export type instagramDownloaderContentType = typeof instagramDownloaderContent;

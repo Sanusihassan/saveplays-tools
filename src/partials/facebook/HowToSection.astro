@@ -1,0 +1,62 @@
+---
+import type { facebookDownloaderContentType } from "../../content/content";
+
+const { howTo } = Astro.props as facebookDownloaderContentType;
+const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: howTo.title,
+    description: howTo.description,
+    step: howTo.steps.map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        name: step.title,
+        text: step.description,
+    })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+<section class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <div class="space-y-8">
+        <header class="text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                {howTo.title}
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                {howTo.description}
+            </p>
+        </header>
+
+        <ol class="space-y-6 list-none">
+            {
+                howTo.steps.map((step, i) => (
+                    <li class="relative pl-12">
+                        <div class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 rounded-full text-white font-bold marker">
+                            {i + 1}
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            {i === 0 ? (
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                                    {step.title}
+                                </h3>
+                            ) : i === 1 ? (
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">
+                                    {step.title}
+                                </h4>
+                            ) : (
+                                <h5 class="text-lg font-semibold text-gray-900 mb-3">
+                                    {step.title}
+                                </h5>
+                            )}
+                            <p class="text-gray-600 leading-relaxed">
+                                {step.description}
+                            </p>
+                        </div>
+                    </li>
+                ))
+            }
+        </ol>
+    </div>
+</section>

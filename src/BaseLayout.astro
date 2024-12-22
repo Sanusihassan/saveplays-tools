@@ -3,13 +3,12 @@ import Footer from "saveplays-footer/src/partials/Footer.astro";
 import NavBar from "saveplays-navbar/components/NavBar.tsx";
 import "./index.scss";
 import SeoHead from "./SeoHead.astro";
-import { youtubePageProps } from "./content/content";
-const { lang, title, isYoutube } = Astro.props;
+const { lang, title, isYoutube, pageProps } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-    <SeoHead {...youtubePageProps}>
+    <SeoHead {...pageProps}>
         {isYoutube ?
         <script type="application/ld+json">
             {

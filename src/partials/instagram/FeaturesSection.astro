@@ -1,0 +1,60 @@
+---
+import type { instagramDownloaderContentType } from "../../content/content";
+
+const { features } = Astro.props as instagramDownloaderContentType;
+
+// Generate schema markup for features
+const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "SavePlays.com Instagram Downloader",
+    description: features.description,
+    hasFeature: features.features.map((item) => ({
+        "@type": "TypeAndQuantityNode",
+        name: item.feature,
+        description: item.description,
+    })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+                {features.title}
+            </h2>
+            <p class="text-xl text-gray-600">
+                {features.description}
+            </p>
+        </div>
+
+        <div class="space-y-12 lg:space-y-20">
+            {
+                features.features.map((item, index) => (
+                    <div
+                        class={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+                    >
+                        <div class="w-full lg:w-1/2">
+                            <img
+                                src={`/${item.imgUrl}`}
+                                alt={item.feature}
+                                class="w-full h-auto rounded-2xl shadow-lg"
+                                loading={index === 0 ? "eager" : "lazy"}
+                            />
+                        </div>
+                        <div class="w-full lg:w-1/2 space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">
+                                {item.feature}
+                            </h3>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                {item.description}
+                            </p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

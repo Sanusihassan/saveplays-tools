@@ -1,10 +1,20 @@
 ---
+import { SearchInput } from "../components/Input";
 import BaseLayout from "../BaseLayout.astro";
+import { youtubePageProps } from "../content/content";
 import AboutArticle from "../partials/youtube/AboutArticle.astro";
 import HowToUse from "../partials/youtube/HowToUse.astro";
 ---
 
-<BaseLayout title="Youtube Downloader" lang="en" isYoutube={true}>
+<BaseLayout
+    title="Youtube Downloader"
+    lang=""
+    isYoutube={true}
+    pageProps={youtubePageProps}
+>
+    <div class="container">
+        <SearchInput client:load />
+    </div>
     <AboutArticle />
     <HowToUse />
 </BaseLayout>
