@@ -1,0 +1,38 @@
+---
+import { MdDevices } from "react-icons/md";
+import { FaDropletSlash } from "react-icons/fa6";
+import { BsFiletypeMp3 } from "react-icons/bs";
+import { BsFiletypeMp4 } from "react-icons/bs";
+import { LuAmpersand } from "react-icons/lu";
+
+
+import type { tiktokDownloaderContentType } from "../../content/content";
+
+const { features } = Astro.props as tiktokDownloaderContentType;
+---
+
+<section class="features py-8 bg-gray-50 text-gray-800">
+    <div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {
+                features.map((feature, index) => (
+                    <div class="feature-card p-6 bg-white shadow-md rounded-lg flex flex-col items-center text-center">
+                        <div class="icon text-4xl text-primary mb-4">
+                            {index === 0 && <MdDevices />}
+                            {index === 1 && <FaDropletSlash />}
+                            {index === 2 && <BsFiletypeMp3 /> <LuAmpersand /> <BsFiletypeMp4 />}
+                        </div>
+                        <div
+                            class="text-xl font-semibold mb-2"
+                            role="heading"
+                            aria-level="3"
+                        >
+                            {feature.title}
+                        </div>
+                        <p class="text-gray-600">{feature.description}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

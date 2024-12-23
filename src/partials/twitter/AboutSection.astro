@@ -1,0 +1,36 @@
+---
+import type { twitterDownloaderContentType } from "../../content/content";
+const { title, description, name } = Astro.props
+    .content as twitterDownloaderContentType["aboutSection"];
+---
+
+<section
+    class="about-section mx-auto my-10"
+    itemscope
+    itemtype="https://schema.org/AboutPage"
+>
+    <header class="about-header mb-8 text-center">
+        <h2
+            itemprop="name"
+            class="about-title text-4xl font-extrabold leading-tight text-gray-900"
+        >
+            {title}
+        </h2>
+    </header>
+    <div class="about-description">
+        <p
+            itemprop="description"
+            class="text-lg leading-relaxed text-gray-700 tracking-wide"
+        >
+            <strong>
+                <i>
+                    {name}
+                </i>
+            </strong>
+            {description.p1}
+        </p>
+        <p class="text-lg leading-relaxed text-gray-700 tracking-wide">
+            {description.p2}
+        </p>
+    </div>
+</section>

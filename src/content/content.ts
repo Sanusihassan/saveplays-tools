@@ -341,17 +341,127 @@ export const instagramDownloaderContent = {
             },
             {
                 feature: "Download Instagram story",
-                description: "Instagram stories are a unique way for anyone to share their daily life with photos and videos. Sometimes you want to save a story you like, but the feature isn't available in the app. Snapinsta was created to solve that problem; to help people download Instagram stories and view them online.",
+                description: "Instagram stories are a unique way for anyone to share their daily life with photos and videos. Sometimes you want to save a story you like, but the feature isn't available in the app. SavePlays was created to solve that problem; to help people download Instagram stories and view them online.",
                 imgUrl: "download-instagram-story.webp"
             },
             {
                 feature: "Instagram story viewer",
-                description: "The new SnapInsta feature, the Instagram story viewer from SnapInsta, lets you view someone's story on IG anonymously and safely; besides viewing the story on SnapInsta, you can also see other parameters (likes, views, follows) as if you were on Instagram, and you can download IG story videos to your device. What are you waiting for? Let's try out this IG story viewer feature.",
+                description: "The new SavePlays feature, the Instagram story viewer from SavePlays, lets you view someone's story on IG anonymously and safely; besides viewing the story on SavePlays, you can also see other parameters (likes, views, follows) as if you were on Instagram, and you can download IG story videos to your device. What are you waiting for? Let's try out this IG story viewer feature.",
                 imgUrl: "instagram-story-viewer.webp"
             }
         ]
     }
 }
-
+export const twitterDownloaderContent = {
+    title: "Twitter (X) Video Downloader",
+    description: "Download videos and GIFs from Twitter tweets.",
+    aboutSection: {
+        title: "Download videos and GIFs from Twitter tweets.",
+        name: "SavePlays Twitter video downloader",
+        description: {
+            p1: " is an online web app to download videos and GIFs from Twitter directly to your computer or mobile phone. Twitter videos and GIFs are embedded in the tweet, so to download Twitter videos online, you need to copy the tweet's URL/link and paste it in the text box above. Our Twitter video downloader will extract the Twitter link to mp4 from the tweet and you can save Twitter videos on your computer, Android, or iPhone.",
+            p2: "To download Twitter videos in MP4 format, just follow the instructions below. SavePlays.com or this site doesn't host any copyrighted material or support unauthorized file sharing, all videos are saved directly from Twitter CDN."
+        }
+    },
+    howTo: {
+        title: "How to Download Twitter videos online?",
+        description: {
+            p1: "Using our Twitter video downloader, it is now easier for you to download twitter videos. Also, you do not have to worry about 'How to save videos from Twitter' because you can also save the video promptly after the video is downloaded.",
+            p2: "Below we have come up with a few simple steps. Follow these simple steps to download twitter videos online."
+        },
+        steps: [
+            {
+                step: "Copy tweet URL",
+                description:
+                    "Find the video you want to save from Twitter and copy the link from the address bar. If you're on the official app, copy the link from the \"Share\" bar.",
+            },
+            {
+                step: "Paste into the input field",
+                description:
+                    'Open our free Twitter video downloader in a new tab and paste the tweet URL in the form at the top of the page. Then click the Download button on the right side of the Twitter video download site to get the page with the video links.',
+            },
+            {
+                step: "Download Twitter video",
+                description:
+                    "When you hit the Download button, you'll see a page with the results in a couple of seconds. Then you can download the Twitter video in different qualities.",
+            },
+        ]
+    }
+}
+export const tiktokDownloaderContent = {
+    title: "TikTok Downloader",
+    description: "No watermark. Fast. All devices",
+    features: [
+        {
+            title: "Device Compatibility",
+            description: "Download TikTok videos on any device: PC, tablet, iPhone, Android."
+        },
+        {
+            title: "No Watermark",
+            description: "Download TikTok videos without a watermark or remove the TikTok logo."
+        },
+        {
+            title: "MP4 and MP3",
+            description: "Save files in HD quality, convert TikTok to mp4 or mp3."
+        },
+    ],
+    about: {
+        title: "Download TikTok video without watermark",
+        description: "SavePlays is a free tool to download TikTok videos without a watermark that helps you get TikTok videos online without a watermark. Save TikTok videos in the best quality in MP4 file format and HD resolution. To learn how to use the app to remove watermarks from TikTok, follow the instructions below."
+    },
+    howTo: {
+        title: "How to download TikTok without watermark?",
+        steps: [
+            {
+                title: "Find a tiktok",
+                description: "Get the video you want to save on your mobile device using the TT app."
+            },
+            {
+                title: "Copy the link",
+                description: "Tap 'Share' (the arrow button at the top of your video) and then tap 'Copy link'"
+            },
+            {
+                title: "Save TikTok",
+                description: "Go to the SavePlays download service without a watermark, paste the link in the text field on the page, and hit the 'Download' button."
+            }
+        ]
+    },
+    FAQ: [
+        {
+            question: "Can I use your TikTok downloader without a watermark on my Android phone?",
+            answer: "Yes, you can use SavePlays TikTok saver to launch the TikTok saver on your Android phone with our app to remove TikTok watermarks. Our TikTok video download service is 100% free, fast, and constantly updated."
+        },
+        {
+            question: "Do I need to have a TT account to download TikTok videos?",
+            answer: "No, you don't need to have a TT account. You can download TikTok videos with just a link. Just paste it in the input field at the top of the page and click the 'Download' button. Our TikTok saver will remove the watermark and the video will be ready to use in a few seconds."
+        },
+        {
+            question: "Where are TT files saved after downloading?",
+            answer: "When you save from TikTok without markups, the files are usually saved to the default TikTok video download location. In your browser settings, you can manually change and select the destination folder for your files."
+        },
+        {
+            question: "Can I download TikTok without a watermark in HD?",
+            answer: "Sure! SavePlays.com is the site to download TikTok videos without a watermark and in the best resolution out there. If we find a video in Full HD resolution or higher of the one you picked, you'll get a link to download high-quality TikToks without watermarks. Plus, you can download TikTok photos with the TikTok watermark remover."
+        },
+        {
+            question: "Do I have to pay to use TikTok and download without a watermark?",
+            answer: "No, you don't have to pay for anything, because our online TikTok downloader without a watermark is totally free! The TikTok saver works with all modern browsers, including Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and more."
+        },
+        {
+            question: "Do I need to install an extension to use the TikTok Downloader?",
+            answer: "No, you don't have to pay for anything, because our online TikTok downloader without a watermark is totally free! The TikTok saver works with all modern browsers, including Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and more."
+        },
+        {
+            question: "Can the HD TikTok Downloader save videos from personal accounts?",
+            answer: "Our website to download TikTok can't access content from private accounts or save TikTok videos without watermarks from there. The account needs to be set to public for the videos to be saved."
+        },
+        {
+            question: "How to get a link for TikTok videos?",
+            answer: "Open the TT app and select the video you want to save. Click on 'Share' and then 'Copy link'. The URL for your TikTok download video will be ready in your clipboard."
+        }
+    ]
+}
 export type facebookDownloaderContentType = typeof facebookDownloaderContent;
 export type instagramDownloaderContentType = typeof instagramDownloaderContent;
+export type twitterDownloaderContentType = typeof twitterDownloaderContent;
+export type tiktokDownloaderContentType = typeof tiktokDownloaderContent;

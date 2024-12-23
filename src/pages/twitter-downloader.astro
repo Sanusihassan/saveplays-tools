@@ -1,11 +1,20 @@
 ---
 import { SearchInput } from "../components/Input";
 import BaseLayout from "../BaseLayout.astro";
-import { twitterPageProps } from "../content/content";
+import { twitterDownloaderContent, twitterPageProps } from "../content/content";
+import AboutSection from "../partials/twitter/AboutSection.astro";
+import HowToSection from "../partials/twitter/HowToSection.astro";
 ---
 
-<BaseLayout title="Twitter (X) Downloader" lang="" pageProps={twitterPageProps}>
+<BaseLayout
+    title={twitterDownloaderContent.title}
+    lang=""
+    pageProps={twitterPageProps}
+>
     <div class="container">
+        <p class="lead text-center">{twitterDownloaderContent.description}</p>
         <SearchInput client:load />
+        <AboutSection content={twitterDownloaderContent.aboutSection} />
+        <HowToSection howTo={twitterDownloaderContent.howTo} />
     </div>
 </BaseLayout>

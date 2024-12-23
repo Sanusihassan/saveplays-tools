@@ -1,11 +1,22 @@
 ---
 import { SearchInput } from "../components/Input";
 import BaseLayout from "../BaseLayout.astro";
-import { tiktokPageProps } from "../content/content";
+import { tiktokDownloaderContent, tiktokPageProps } from "../content/content";
+import FeaturesSection from "../partials/tiktok/FeaturesSection.astro";
+import HowToSection from "../partials/tiktok/HowToSection.astro";
+import FAQ from "../components/Faq";
 ---
 
-<BaseLayout title="TikTok Downloader" lang="" pageProps={tiktokPageProps}>
+<BaseLayout
+    title={tiktokDownloaderContent.title}
+    lang=""
+    pageProps={tiktokPageProps}
+>
     <div class="container">
+        <p class="lead text-center">{tiktokDownloaderContent.description}</p>
         <SearchInput client:load />
+        <FeaturesSection features={tiktokDownloaderContent.features} />
+        <HowToSection howTo={tiktokDownloaderContent.howTo} />
+        <FAQ client:load faqData={tiktokDownloaderContent.FAQ} />
     </div>
 </BaseLayout>

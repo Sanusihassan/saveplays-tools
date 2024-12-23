@@ -1,0 +1,58 @@
+---
+import type { twitterDownloaderContentType } from "../../content/content";
+
+const { howTo } = Astro.props as twitterDownloaderContentType;
+// Add schema markup for SEO
+const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: howTo.title,
+    description: `${howTo.description.p1} ${howTo.description.p2}`,
+    step: howTo.steps.map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        name: step.step,
+        text: step.description,
+    })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+<section class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">
+            {howTo.title}
+        </h1>
+        <div class="space-y-4 max-w-3xl mx-auto">
+            <p class="text-lg text-gray-600 leading-relaxed">
+                {howTo.description.p1}
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                {howTo.description.p2}
+            </p>
+        </div>
+    </header>
+
+    <ol class="space-y-8">
+        {
+            howTo.steps.map((step, index) => (
+                <li class="relative">
+                    <article class="pl-12 md:pl-16">
+                        <div class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full marker text-white font-bold text-lg">
+                            {index + 1}
+                        </div>
+                        <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                                {step.step}
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                {step.description}
+                            </p>
+                        </div>
+                    </article>
+                </li>
+            ))
+        }
+    </ol>
+</section>
