@@ -1,3 +1,27 @@
+---
+import type { youtubeDownloaderContentType } from "../../content/content";
+
+const { howTo } = Astro.props as youtubeDownloaderContentType;
+
+// Generate Schema.org HowTo JSON-LD
+const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: howTo.title,
+    image: "/guide-to-download-youtube-video.png",
+    step: howTo.steps.map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        text: step,
+    })),
+};
+---
+
+<script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(howToSchema)}
+/>
 <article class="downloader-container">
     <div class="download-guide">
         <img
@@ -9,25 +33,21 @@
         />
     </div>
     <div class="instructions">
-        <h2>How to Use the YouTube Downloader</h2>
-        <ol class="steps-list">
-            <li class="step-item">
-                Head over to SavePlays.com, the go-to platform for fast YouTube
-                video downloads, and locate the URL input field at the top of
-                the homepage.
-            </li>
-            <li class="step-item">
-                Copy the URL of the YouTube video and paste it into the input
-                field on SavePlays.com.
-            </li>
-            <li class="step-item">
-                Press the "Download" button to access the list of available
-                download links.
-            </li>
-            <li class="step-item">
-                Choose your preferred video format from the options to start
-                downloading your selected file.
-            </li>
+        <h2>{howTo.title}</h2>
+        <ol class="steps-list" item-scope item-type="https://schema.org/HowTo">
+            {
+                howTo.steps.map((step, id) => (
+                    <li
+                        class="step-item"
+                        item-prop="step"
+                        item-scope
+                        item-type="https://schema.org/HowToStep"
+                    >
+                        <meta item-prop="position" content={String(id + 1)} />
+                        <span item-prop="text">{step}</span>
+                    </li>
+                ))
+            }
         </ol>
     </div>
 </article>

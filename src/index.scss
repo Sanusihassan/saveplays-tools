@@ -102,6 +102,10 @@ $main-color: #2ab7a9;
 
 svg {
     display: initial !important;
+
+    @include ar-wrapper {
+        direction: ltr;
+    }
 }
 
 .marker {

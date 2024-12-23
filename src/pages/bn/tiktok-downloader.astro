@@ -1,0 +1,26 @@
+---
+import { SearchInput } from "../../components/Input";
+import BaseLayout from "../../BaseLayout.astro";
+import {
+    tiktokDownloaderContent,
+    tiktokPageProps,
+    placeholder,
+} from "../../content/content-bn";
+import FeaturesSection from "../../partials/tiktok/FeaturesSection.astro";
+import HowToSection from "../../partials/tiktok/HowToSection.astro";
+import FAQ from "../../components/Faq";
+---
+
+<BaseLayout
+    title={tiktokDownloaderContent.title}
+    lang="bn"
+    pageProps={tiktokPageProps}
+>
+    <div class="container">
+        <p class="lead text-center">{tiktokDownloaderContent.description}</p>
+        <SearchInput client:load placeholder={placeholder} />
+        <FeaturesSection features={tiktokDownloaderContent.features} />
+        <HowToSection howTo={tiktokDownloaderContent.howTo} />
+        <FAQ client:load faqData={tiktokDownloaderContent.FAQ} />
+    </div>
+</BaseLayout>

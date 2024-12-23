@@ -17,7 +17,11 @@ const schemaData = {
 };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+<script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(schemaData)}
+/>
 
 <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

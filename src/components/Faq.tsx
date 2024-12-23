@@ -1,4 +1,4 @@
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { ChevronUp } from 'lucide-react';
 
 const FAQ = ({ faqData }: {
@@ -37,13 +37,13 @@ const FAQ = ({ faqData }: {
                     <Disclosure key={index}>
                         {({ open }) => (
                             <div className="bg-white rounded-lg border p-4">
-                                <Disclosure.Button className="flex w-full justify-between items-center text-left">
+                                <DisclosureButton className="flex w-full justify-between items-center text-left">
                                     <span className="text-lg font-semibold">{item.question}</span>
                                     <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 transition-transform`} />
-                                </Disclosure.Button>
-                                <Disclosure.Panel className="text-gray-600 pt-4">
+                                </DisclosureButton>
+                                <DisclosurePanel className="text-gray-600 pt-4">
                                     {item.answer}
-                                </Disclosure.Panel>
+                                </DisclosurePanel>
                             </div>
                         )}
                     </Disclosure>

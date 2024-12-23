@@ -255,6 +255,32 @@ export const twitterPageProps: SeoProps = {
     nofollow: false,
     noindex: false,
 };
+
+export const youtubeDownloaderContent = {
+    title: "YouTube video downloader",
+    about: {
+        p1: {
+            yt: "YouTube",
+            text: " ranks as the world's second-largest search engine, dominating the online video industry.",
+        },
+        p2: "However, due to its strict policies, downloading videos directly from YouTube can be quite challenging for users.",
+        feature: {
+            site: "SavePlays.com",
+            text: "offers a free and unrestricted solution for downloading YouTube videos in various resolutions, including standard quality (SQ), high definition (HD), Full HD, 2K, and 4K MP4 formats."
+        },
+        p3: "This tool also simplifies the process of converting YouTube videos into MP3 files, making audio content more accessible than ever.",
+        p4: "At SavePlays, we are dedicated to providing a YouTube video downloader that combines user-friendliness with high efficiency. Whether you're using a PC or a mobile device, our tool is perfect for downloading videos for offline viewing or converting YouTube content into audio files. We ensure a seamless download experience every time."
+    },
+    howTo: {
+        title: "How to Use the YouTube Downloader",
+        steps: [
+            "Head over to SavePlays.com, the go-to platform for fast YouTube video downloads, and locate the URL input field at the top of the homepage.",
+            "Copy the URL of the YouTube video and paste it into the input field on SavePlays.com.",
+            "Press the \"Download\" button to access the list of available download links.",
+            "Choose your preferred video format from the options to start downloading your selected file."
+        ]
+    }
+}
 export const facebookDownloaderContent = {
     title: "Facebook Downloader",
     description: "Download Facebook videos online",
@@ -461,6 +487,7 @@ export const tiktokDownloaderContent = {
         }
     ]
 }
+export type youtubeDownloaderContentType = typeof youtubeDownloaderContent;
 export type facebookDownloaderContentType = typeof facebookDownloaderContent;
 export type instagramDownloaderContentType = typeof instagramDownloaderContent;
 export type twitterDownloaderContentType = typeof twitterDownloaderContent;

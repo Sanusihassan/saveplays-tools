@@ -1,0 +1,22 @@
+---
+import { SearchInput } from "../../components/Input";
+import BaseLayout from "../../BaseLayout.astro";
+import {
+    instagramDownloaderContent,
+    instagramPageProps,
+    placeholder,
+} from "../../content/content-de";
+import FeaturesSection from "../../partials/instagram/FeaturesSection.astro";
+---
+
+<BaseLayout
+    title={instagramDownloaderContent.title}
+    lang="de"
+    pageProps={instagramPageProps}
+>
+    <div class="container">
+        <p class="lead text-center">{instagramDownloaderContent.description}</p>
+        <SearchInput client:load placeholder={placeholder} />
+        <FeaturesSection features={instagramDownloaderContent.features} />
+    </div>
+</BaseLayout>

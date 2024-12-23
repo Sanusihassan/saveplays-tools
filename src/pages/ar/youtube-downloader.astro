@@ -1,0 +1,24 @@
+---
+import { SearchInput } from "../../components/Input";
+import BaseLayout from "../../BaseLayout.astro";
+import {
+    youtubePageProps,
+    youtubeDownloaderContent,
+    placeholder,
+} from "../../content/content-ar";
+import AboutArticle from "../../partials/youtube/AboutArticle.astro";
+import HowToUse from "../../partials/youtube/HowToUse.astro";
+---
+
+<BaseLayout
+    title={youtubeDownloaderContent.title}
+    lang="ar"
+    isYoutube={true}
+    pageProps={youtubePageProps}
+>
+    <div class="container">
+        <SearchInput client:load placeholder={placeholder} />
+    </div>
+    <AboutArticle about={youtubeDownloaderContent.about} />
+    <HowToUse howTo={youtubeDownloaderContent.howTo} />
+</BaseLayout>

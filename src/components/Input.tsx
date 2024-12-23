@@ -1,5 +1,5 @@
 import { VscGitFetch } from "react-icons/vsc";
-import { AiOutlineLoading } from "react-icons/ai";
+// import { AiOutlineLoading } from "react-icons/ai";
 
 
 export const SearchInput = ({ placeholder = "Paste your link here" }: { placeholder?: string }) => {

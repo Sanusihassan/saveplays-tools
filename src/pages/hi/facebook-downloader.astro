@@ -1,0 +1,24 @@
+---
+import FAQ from "../../components/Faq";
+import { SearchInput } from "../../components/Input";
+import BaseLayout from "../../BaseLayout.astro";
+import {
+    facebookDownloaderContent,
+    facebookPageProps,
+    placeholder,
+} from "../../content/content-hi";
+import HowToSection from "../../partials/facebook/HowToSection.astro";
+---
+
+<BaseLayout
+    title={facebookDownloaderContent.title}
+    lang="hi"
+    pageProps={facebookPageProps}
+>
+    <div class="container">
+        <p class="lead text-center">{facebookDownloaderContent.description}</p>
+        <SearchInput client:load placeholder={placeholder} />
+        <HowToSection howTo={facebookDownloaderContent.howTo} />
+        <FAQ client:load faqData={facebookDownloaderContent.FAQ} />
+    </div></BaseLayout
+>

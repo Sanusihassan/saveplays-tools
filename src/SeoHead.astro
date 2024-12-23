@@ -106,7 +106,11 @@ const combinedStructuredData = [...defaultStructuredData, ...structuredData];
 
   {
     combinedStructuredData.map((data) => (
-      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(data)}
+      />
     ))
   }
   <link rel="preconnect" href="https://fonts.googleapis.com" />

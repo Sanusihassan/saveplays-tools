@@ -1,33 +1,31 @@
+---
+import type { youtubeDownloaderContentType } from "../../content/content";
+
+const { about } = Astro.props as youtubeDownloaderContentType;
+---
+
 <section class="container">
     <article class="about-article">
         <p class="lead">
-            <strong>YouTube</strong> ranks as the world's second-largest search engine,
-            dominating the online video industry.
+            <strong>{about.p1.yt}</strong>
+            {about.p1.text}
         </p>
 
         <p>
-            However, due to its strict policies, downloading videos directly
-            from YouTube can be quite challenging for users.
+            {about.p2}
         </p>
 
         <p class="feature">
-            <strong>SavePlays.com</strong> offers a free and unrestricted solution
-            for downloading YouTube videos in various resolutions, including standard
-            quality (SQ), high definition (HD), Full HD, 2K, and 4K MP4 formats.
+            <strong>{about.feature.site}</strong>
+            {about.feature.text}
         </p>
 
         <p>
-            This tool also simplifies the process of converting YouTube videos
-            into MP3 files, making audio content more accessible than ever.
+            {about.p3}
         </p>
 
         <p>
-            At SavePlays, we are dedicated to providing a YouTube video
-            downloader that combines user-friendliness with high efficiency.
-            Whether you're using a PC or a mobile device, our tool is perfect
-            for downloading videos for offline viewing or converting YouTube
-            content into audio files. We ensure a seamless download experience
-            every time.
+            {about.p4}
         </p>
     </article>
 </section>
